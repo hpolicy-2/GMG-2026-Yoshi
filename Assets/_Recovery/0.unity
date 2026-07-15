@@ -1208,7 +1208,6 @@ GameObject:
   - component: {fileID: 871244431}
   - component: {fileID: 871244430}
   - component: {fileID: 871244429}
-  - component: {fileID: 871244433}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1225,7 +1224,7 @@ Transform:
   m_GameObject: {fileID: 871244427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.372, y: 0.519, z: 0}
+  m_LocalPosition: {x: 1.366, y: 0.378, z: 0}
   m_LocalScale: {x: 0.32350403, y: 0.4832373, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1276,7 +1275,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &871244431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1382,19 +1381,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &871244433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871244427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb970c45b40bb4652a8310660a03dfb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystemAttribute
-  health: 3
 --- !u!1 &899533471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,10 +1426,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87754971baa51745818c1316f1adfb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  bullet: {fileID: 1186690132998853486, guid: 45e3b06b5cd47354f9f364bc8bb236b1, type: 3}
-  bulletTransform: {fileID: 1060882125}
-  canFire: 1
-  timeBetweenFiring: 0.3
+  bullet: {fileID: 0}
+  bulletTransform: {fileID: 0}
+  canFire: 0
+  timeBetweenFiring: 0
 --- !u!1 &1022798376
 GameObject:
   m_ObjectHideFlags: 0
