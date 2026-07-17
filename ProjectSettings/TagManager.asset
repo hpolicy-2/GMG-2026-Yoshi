@@ -6,17 +6,18 @@ TagManager:
   tags:
   - Ground
   - Border
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Border
+  - Bullet
+  - Enemy
+  - Ground
   - 
   - 
   - 
