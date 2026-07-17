@@ -1,16 +1,6 @@
-using UnityEngine;
-
-public class NewMonoBehaviourScript : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+using System.Collections;using System.Collections.Generic;using UnityEngine;public class MirrorUI : MonoBehaviour
+{    public GameObject uiObject;    private void OnTriggerEnter(Collider collision)
+    {        if (collision.CompareTag("Player"))
+        {            uiObject.SetActive(true);        }    }    private void OnTriggerExit(Collider collision)
+    {        if (collision.CompareTag("Player"))
+        {            uiObject.SetActive(false);        }    }}
