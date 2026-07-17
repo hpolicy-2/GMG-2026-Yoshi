@@ -2447,9 +2447,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1608220847}
-  - component: {fileID: 1608220850}
   - component: {fileID: 1608220849}
-  - component: {fileID: 1608220848}
+  - component: {fileID: 1608220851}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -2472,26 +2471,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1260858814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1608220848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608220846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9117653835b354259a0c03ce702840f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueBalloonAction
-  textToDisplay: Check in the mirror!
-  backgroundColor: {r: 0.70513016, g: 0.6541474, b: 0.7075472, a: 1}
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  targetObject: {fileID: 867968322}
-  disappearMode: 1
-  timeToDisappear: 2
-  keyToPress: 13
-  followingText: {fileID: 0}
 --- !u!61 &1608220849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2537,31 +2516,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.3, y: 0.7}
-  m_EdgeRadius: 0
---- !u!114 &1608220850
+  m_EdgeRadius: 9.14
+--- !u!114 &1608220851
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608220846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810546aa5348745779a5772744036fd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 32cbc853549193047873a8f2e8b4c011, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConditionArea
-  actions:
-  - {fileID: 1608220848}
-  - {fileID: 0}
-  useCustomActions: 0
-  customActions:
-    m_PersistentCalls:
-      m_Calls: []
-  happenOnlyOnce: 0
-  filterByTag: 1
-  filterTag: Player
-  frequency: 1
-  eventType: 0
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1635553779
 GameObject:
   m_ObjectHideFlags: 0
