@@ -1,4 +1,7 @@
-using UnityEngine;using System.Collections;public class Mouse_Control : MonoBehaviour
+using UnityEngine;
+using System.Collections;
+
+public class Mouse_Control : MonoBehaviour
 {
 
 
@@ -6,7 +9,10 @@ using UnityEngine;using System.Collections;public class Mouse_Control : MonoB
 
 
 
-    /// <summary>    /// 1 - The speed of the ship    /// </summary>                                                                           public Vector2 speed = new Vector2(5f, 2f);
+    /// <summary>
+    /// 1 - The speed of the ship
+    /// </summary>
+                                                                           public Vector2 speed = new Vector2(5f, 2f);
 
     //The position you clicked
     public Vector2 targetPosition;
@@ -55,4 +61,5 @@ targetPosition.y - gameObject.transform.position.y);
         // 6 - Move the game object using the physics engine
         GetComponent<Rigidbody2D>().linearVelocity = movement;
 
-    }}
+    }
+}
