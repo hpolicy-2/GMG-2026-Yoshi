@@ -1,40 +1,45 @@
+using System.Collections;
 using UnityEngine;
 
 public class RoundManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    private bool isRoundActive = false;
     public GameObject[] attacks;
-
-
+    public Transform gridTransform;
+    private GameObject currentAttack;
+    private bool roundOver;
+    public GameObject player;
     void Start()
     {
-        //Set starting health value
-        //Wait for player input
-        //isRoundActive = true
-
+        StartCoroutine(RoundLoop());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator RoundLoop()
     {
-   
-       if (!isRoundActive)
+        while (true)
         {
-            //Wait for player input
-            //Paste Round Choose Function
+           
+            roundOver = false;
+
+            int attackNumber = Random.Range(0, attacks.Length); //generate random number form 0-# of attacks
+
+            currentAttack = Instantiate(attacks[attackNumber], Vector3.zero, Quaternion.identity); //spawn random attack
+            currentAttack.transform.parent = gridTransform;
+          
+            float timer = 5f; // length of each round
+
+            while (timer > 0f && !roundOver)
+            {
+              
+                timer -= Time.deltaTime; // subtrack the amount of time that has passed from the timer variable
+                yield return null; //exit out of the while loop
+            }
+        
+            Destroy(currentAttack); //destroy the active level
         }
-
     }
 
-    void RoundPick()
-    {
-        //Pick random attack
-        //Make that attack active
-    }
     public void EnemyDefeated()
     {
-        //isRoundActive = false
+        roundOver = true;
     }
 }

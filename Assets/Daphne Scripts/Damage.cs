@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    public int damage = 2;
-    public Health playerHealth;
+    public int damage = 0;
+    public Player playerHealth;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,9 +21,10 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided");
+        
         if(collision.gameObject.tag == "Player")
         {
+            Debug.Log("Collided");
             playerHealth.TakeDamage(damage);
 
         }
