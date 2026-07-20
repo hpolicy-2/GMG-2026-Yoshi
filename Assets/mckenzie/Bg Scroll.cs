@@ -1,0 +1,3 @@
+using UnityEngine;using UnityEngine.UI;public class ImageScroller : MonoBehaviour{    [SerializeField] private RawImage img;    [SerializeField] private float xSpeed = 0.1f;    [SerializeField] private float ySpeed = 0.1f;    void Update()    {
+        // Calculate the new UV offset based on time and speed
+        Vector2 offset = new Vector2(xSpeed, ySpeed) * Time.time;        img.uvRect = new Rect(offset, img.uvRect.size);    }}
