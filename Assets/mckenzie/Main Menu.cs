@@ -9,6 +9,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
     }
     public void LoadSafeRoom() { SceneManager.LoadScene("Safe Room"); }
+    
+    public void QuitGame() { Application.Quit(); }
+
     // Update is called once per frame
     void Update()
     {
