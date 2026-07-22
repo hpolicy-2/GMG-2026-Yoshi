@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d4ed0d54957640bf1f99ebf2dc728, type: 3}
+  m_Name: Death8
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CHey, I noticed that our school\u2019s prom is coming up soon. Have
+      you thought about that at all?\u201D\r\n"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CNot really\u2026 I don\u2019t have the courage to ask a certain
+      someone out\u2026\u201D\r\n"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CMe either to be honest.\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CIt would be a dream to go with that person and dance all night with
+      them!\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CYeah\u2026 that\u2019s really nice\u2026\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}

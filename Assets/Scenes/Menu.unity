@@ -976,6 +976,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1310473224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310473225}
+  - component: {fileID: 1310473226}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310473225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310473224}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 734.70734, y: 266.15204, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1310473226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310473224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5a24508da2bd040b2cae2bd4825211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainGameManager
+  deathCount: 0
+  healthReductionPerDeath: 0.2
+  minimumHealthPercent: 0.1
+  introDialogue: {fileID: 11400000, guid: d1e3d1a3cee867a4180133e7bd393eb3, type: 2}
+  deathDialoguePool:
+  - {fileID: 11400000, guid: 5075cad9bb12bdb45bcba68cabf32e7b, type: 2}
+  - {fileID: 11400000, guid: f5c73bd28833d1347bd8eac36730d33c, type: 2}
+  - {fileID: 11400000, guid: 3d9f0cf66f7cc7047b76af26b1e2c309, type: 2}
+  - {fileID: 11400000, guid: 93a48f45f056b5345b151f47e31a3226, type: 2}
+  - {fileID: 11400000, guid: 9c54dea271cee304db0718bd669c33c8, type: 2}
+  - {fileID: 11400000, guid: 75685701aa05e7c4dbcd2ab5c30cc6a6, type: 2}
+  - {fileID: 11400000, guid: 50ee9a26801531f45b6b4e79ca4e14b7, type: 2}
+  - {fileID: 11400000, guid: 44c68ac1fcd1034409a1efb42f25a4ac, type: 2}
+  - {fileID: 11400000, guid: 297456345ebcfe549b13ab2ab4fa4bc8, type: 2}
+  - {fileID: 11400000, guid: 7582b65fb8c3d4d4693373ea116e85cb, type: 2}
+  finalVictoryDialogue: {fileID: 11400000, guid: 31dc45d3a7f28d8418fd45c6dd6ca1fe, type: 2}
+  combatSceneNames:
+  - Combat
+  safeRoomSceneName: SafeRoom
 --- !u!1 &1590516639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,3 +1525,4 @@ SceneRoots:
   - {fileID: 943830809}
   - {fileID: 1736145764}
   - {fileID: 1262871821}
+  - {fileID: 1310473225}

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d4ed0d54957640bf1f99ebf2dc728, type: 3}
+  m_Name: Death10
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CI noticed that from your window I can get a really good look at
+      the stars. Do you like the stars?\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CHm? Oh, yeah. I love the stars. Sometimes I even go outside at,
+      like, midnight to just stare at them.\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CWould you like to do that with me sometime?\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CWhat? Sorry, I didn\u2019t catch that fully.\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CNever mind. It\u2019s kinda stupid.\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CI mean if you want to, we could totally go stargazing sometime together.\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: '"Really??"'
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}

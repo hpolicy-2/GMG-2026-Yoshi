@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class enemyhealth : MonoBehaviour
 {
+    [SerializeField] private float baseMaxHealth = 100f;
+    private float currentHealth;
+
     public int health;
-    private int currentHealth;
+    public ParticleSystem enemyDamageFX;
+    public EnemyHealthBarUI healthBarUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        currentHealth = health;
-        
+        float percent = MainGameManager.Instance.GetEnemyHealthPercent();
+        currentHealth = baseMaxHealth * percent;
+
+        healthBarUI.SetHealth(currentHealth);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -20,9 +27,22 @@ public class enemyhealth : MonoBehaviour
         }
     }
 
-    public void damageEnemy(int damage)
+    public void damageEnemy(float amount)
     {
-        currentHealth -= damage;
+        enemyDamageFX.Play();
+
+        currentHealth -= amount;
+        if (currentHealth <= 0f)
+        {
+            Die();
+        }
 
     }
+    private void Die()
+    {
+        MainGameManager.Instance.OnEnemyDefeated();
+    }
+
 }   
+
+

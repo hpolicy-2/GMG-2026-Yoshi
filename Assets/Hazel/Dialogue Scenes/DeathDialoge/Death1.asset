@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d4ed0d54957640bf1f99ebf2dc728, type: 3}
+  m_Name: Death1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: '"Here''s my room!"'
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: '"Cool, dude. It matches your vibes."'
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: '"Thanks! I picked the color and everything."'
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: '"Are blue and pink your favorite colors?"'
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: '"Yeah... they give me a sense of comfort."'
+    typingSound: {fileID: 0}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: '"I love those colors too."'
+    typingSound: {fileID: 0}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: '"ohmygodyouresoperfect"'
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: '"What?"'
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: '"Nothing!"'
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}

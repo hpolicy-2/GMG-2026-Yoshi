@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d4ed0d54957640bf1f99ebf2dc728, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CAhhh!!! Where is my diary???\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CCome on! I need it! It\u2019s the only way I can get this out.\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CNonononononononononono\u2026\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201COh\u2026 thank god\u2026\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CDear Diary\u2026\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CToday\u2026 I was thinking about her again\u2026 And how absolutely
+      perfect she is down to her core.\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: " \u201CThe sweetness that brightens up my world endlessly into shades
+      of only pastels.\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CWhoops, that seems a little obsessive, but all it is to say that
+      it is my duty, my quest to make her my queen at this prom!\u201D"
+    typingSound: {fileID: 0}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CBut something like that could only be a dream\u2026 never reality.\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CBut it never hurts to dream! I could only admire her from afar.\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CWould she even know my name? Who knows! But will it go swimmingly?
+      Absolutely!\u201D "
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: " \u201CI will get my happily ever after!\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: ???
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CSigned, Sidney.\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CPhew\u2026 that was a lot of my chest.\u201D "
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CBetter lock that up! No one can see this!\u201D "
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CBut one day, she will notice me!\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CSome day\u2026\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}

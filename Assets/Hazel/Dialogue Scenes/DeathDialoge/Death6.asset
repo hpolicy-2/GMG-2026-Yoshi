@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4d4ed0d54957640bf1f99ebf2dc728, type: 3}
+  m_Name: Death6
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  lines:
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CYo, Sidney! You ever thought about your favorite mythical creature?
+      I\u2019ve always been curious about your fantasy stuff.\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CLovie\u2026 You have no idea. What. You. Have. Awakened.\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201CIs that a good or a bad thing.\u201D "
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CGood, if you like listening. Bad, if you don\u2019t.\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CI love, love, love, LOVE the Pegasus because it just seems so majestic,
+      the way a typically normal creature just has the ability to fly as if all creatures
+      like that were meant to do so, it kinda sparks some inspiration in me to be
+      able to do my own daring things.\u201D\r\n"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: "\u201COh, that\u2019s really cool! I\u2019ve always wanted to know more
+      about what you are clearly obsessed with, you freaking nerd.\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: " \u201CDon\u2019t think I forgot that you\u2019re also a nerd, Love\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
+  - speakerName: Lovie
+    portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
+    text: " \u201CL-L-L-Love?!!!\u201D"
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
+  - speakerName: Sidney
+    portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
+    text: "\u201CNEVER MIND DROP IT!\u201D"
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}

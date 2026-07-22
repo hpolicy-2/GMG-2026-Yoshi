@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Border
   - Enemy
+  - Bullet
+  - MainEnemy
   layers:
   - Default
   - TransparentFX

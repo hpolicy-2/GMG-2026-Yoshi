@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9cf23c7b359d9044685dfc3088788718
+guid: 9892a9fb231417f4c928fe8cd711111f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4979291846858712158
-    second: Gf_Main_0
+      213: -458423623252147687
+    second: SidneyIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gf_Main_0
+      name: SidneyIcon_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 114
-        height: 127
+        width: 32
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2abdcfa527006eab0800000000000000
-      internalID: -4979291846858712158
+      spriteID: 912886bb42a53a9f0800000000000000
+      internalID: -458423623252147687
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gf_Main_0: -4979291846858712158
+      SidneyIcon_0: -458423623252147687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9cf23c7b359d9044685dfc3088788718
+guid: 7ca14bf446cd1ed4db199d7399bf21d7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4979291846858712158
-    second: Gf_Main_0
+      213: -755074056425189896
+    second: LoviePortrait_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gf_Main_0
+      name: LoviePortrait_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 114
-        height: 127
+        width: 34
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2abdcfa527006eab0800000000000000
-      internalID: -4979291846858712158
+      spriteID: 8fdc9af65207585f0800000000000000
+      internalID: -755074056425189896
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gf_Main_0: -4979291846858712158
+      LoviePortrait_0: -755074056425189896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

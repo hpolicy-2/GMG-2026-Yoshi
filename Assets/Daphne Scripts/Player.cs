@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    [SerializeField] private CinemachineImpulseSource impulseSource;
+    [SerializeField] private float shakeForce = 1f;
+
     public float Health,
     MaxHealth;
     [SerializeField] private HealthBarUI healthBar;
@@ -31,11 +36,31 @@ public class Player : MonoBehaviour
     public void TakeDamage(int amount)
     {
         setHealth(- amount);
+
+        ShakeCamera();
         Debug.Log("Player hit by " + amount + "!");
         if (Health <= 0)
         {
+            MainGameManager.Instance.OnPlayerDeath();
             Destroy(gameObject);
+        }
+
+    }
+
+
+
+
+    
+
+    // Call this from your existing damage method
+ 
+    private void ShakeCamera()
+    {
+        if (impulseSource != null)
+        {
+            impulseSource.GenerateImpulse(shakeForce);
         }
     }
 }
+
 
