@@ -1,16 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class DamageEffect : MonoBehaviour
 {
+    public ParticleSystem damageEffect;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
     }
-    public void LoadSafeRoom() { SceneManager.LoadScene("Safe Room"); }
-    
-    public void QuitGame() { Application.Quit(); }
 
     // Update is called once per frame
     void Update()
