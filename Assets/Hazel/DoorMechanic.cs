@@ -1,27 +1,51 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class DoorMechanic : MonoBehaviour
+public class Door : MonoBehaviour
 {
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject interactPrompt;
+    private bool playerInRange = false;
+    private bool isLocked = true;
+
+    public void SetLocked(bool locked)
     {
-        
+        isLocked = locked;
+        if (isLocked && interactPrompt != null)
+            interactPrompt.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (playerInRange && !isLocked && Input.GetKeyDown(KeyCode.E))
         {
-
-            SceneManager.LoadScene("Combat");
+            OpenDoor();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+            if (!isLocked && interactPrompt != null)
+                interactPrompt.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+            if (interactPrompt != null)
+                interactPrompt.SetActive(false);
+        }
+    }
+
+    private void OpenDoor()
+    {
+        if (interactPrompt != null)
+            interactPrompt.SetActive(false);
+
+        FindFirstObjectByType<SafeRoomController>().OnDoorOpened();
     }
 }

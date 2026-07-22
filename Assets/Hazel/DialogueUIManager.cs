@@ -10,6 +10,11 @@ public class DialogueUIManager : MonoBehaviour
     [SerializeField] private Image portraitImage;
     [SerializeField] private float typeSpeed = 0.02f;
 
+    [Header("Typing Sound")]
+    [SerializeField] private AudioSource typingAudioSource;
+    [SerializeField] private int playSoundEveryNChars = 2; // skip vowels/every letter to avoid spam
+    [SerializeField] private Vector2 pitchRange = new Vector2(0.92f, 1.08f);
+
     private DialogueData currentDialogue;
     private int lineIndex;
     private bool isTyping;
@@ -57,16 +62,27 @@ public class DialogueUIManager : MonoBehaviour
         speakerNameText.text = line.speakerName;
         portraitImage.sprite = line.portrait;
         StopAllCoroutines();
-        StartCoroutine(TypeText(line.text));
+        StartCoroutine(TypeText(line.text, line.typingSound));
     }
 
-    private System.Collections.IEnumerator TypeText(string text)
+    private System.Collections.IEnumerator TypeText(string text, AudioClip voiceClip)
     {
         isTyping = true;
         dialogueText.text = "";
-        foreach (char c in text)
+
+        for (int i = 0; i < text.Length; i++)
         {
-            dialogueText.text += c;
+            dialogueText.text += text[i];
+
+            // Skip spaces/punctuation so it doesn't blip on silence
+            bool isLetter = char.IsLetterOrDigit(text[i]);
+
+            if (isLetter && i % playSoundEveryNChars == 0 && voiceClip != null)
+            {
+                typingAudioSource.pitch = Random.Range(pitchRange.x, pitchRange.y);
+                typingAudioSource.PlayOneShot(voiceClip);
+            }
+
             yield return new WaitForSeconds(typeSpeed);
         }
         isTyping = false;

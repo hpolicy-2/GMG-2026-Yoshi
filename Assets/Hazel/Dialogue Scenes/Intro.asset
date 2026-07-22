@@ -16,38 +16,38 @@ MonoBehaviour:
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CAhhh!!! Where is my diary???\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CCome on! I need it! It\u2019s the only way I can get this out.\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CNonononononononononono\u2026\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201COh\u2026 thank god\u2026\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CDear Diary\u2026\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CToday\u2026 I was thinking about her again\u2026 And how absolutely
       perfect she is down to her core.\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: " \u201CThe sweetness that brightens up my world endlessly into shades
       of only pastels.\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CWhoops, that seems a little obsessive, but all it is to say that
       it is my duty, my quest to make her my queen at this prom!\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: ???
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CBut something like that could only be a dream\u2026 never reality.\u201D"
