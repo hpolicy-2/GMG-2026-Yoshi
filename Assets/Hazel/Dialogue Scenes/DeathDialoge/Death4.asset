@@ -68,52 +68,52 @@ MonoBehaviour:
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: "\u201CBut your hope, your ambition\u2026\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: "\u201CHas made me see a side\u2026 a side where hope is okay.\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: "\u201CI want to be your part-\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Sidney
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CWhat was that you were about to say?\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: "\u201CI SAID BEST FRIENDS! WHAT ARE YOU TALKING ABOUT?\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Sidney
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CAre you sure about that?\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: '"Yeah, I''m positive."'
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: '"Dummy."'
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Sidney
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201CIf that ever changes let me know! *wink*\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: "\u201CWhat are you insinuating?\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Sidney
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: "\u201COh nothing!\u201D"
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
   - speakerName: Lovie
     portrait: {fileID: -755074056425189896, guid: 7ca14bf446cd1ed4db199d7399bf21d7, type: 3}
     text: '"Really?"'
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: 50dc94b23013f4c4b87c049728579203, type: 3}
   - speakerName: Sidney
     portrait: {fileID: -458423623252147687, guid: 9892a9fb231417f4c928fe8cd711111f, type: 3}
     text: '*ABORT, ABORT, ABORT*'
-    typingSound: {fileID: 0}
+    typingSound: {fileID: 8300000, guid: d1008ddac7f8ca941bff0618740cdb38, type: 3}
