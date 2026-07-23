@@ -12,17 +12,15 @@ public class enemyhealth : MonoBehaviour
     [SerializeField] private AudioClip hitSound;
     [SerializeField] private AudioClip deathSound;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         float percent = MainGameManager.Instance.GetEnemyHealthPercent();
         currentHealth = baseMaxHealth * percent;
 
+        healthBarUI.SetMaxHealth(currentHealth); // set max
         healthBarUI.SetHealth(currentHealth);
     }
 
-
-    // Update is called once per frame
     void Update()
     {
         if (currentHealth <= 0)
@@ -37,18 +35,18 @@ public class enemyhealth : MonoBehaviour
         SoundManager.Instance.PlaySFX(hitSound);
 
         currentHealth -= amount;
+        healthBarUI.SetHealth(currentHealth); // update bar
+
         if (currentHealth <= 0f)
         {
             Die();
         }
-
     }
+
     private void Die()
     {
-        SoundManager.Instance.PlaySFX(deathSound); 
+        SoundManager.Instance.PlaySFX(deathSound);
         MainGameManager.Instance.OnEnemyDefeated();
     }
 
-}   
-
-
+}

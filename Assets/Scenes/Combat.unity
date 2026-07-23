@@ -1058,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1106399541508799013, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: speed
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1565109920395993195, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_Sprite
@@ -1094,7 +1094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2317629157363439591, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: speed
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2683483081834061875, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8186,11 +8186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575909745765949909, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: speed
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8606939335869377732, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: speed
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8853719276242563672, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_Color.b
@@ -8438,15 +8438,15 @@ RectTransform:
   m_GameObject: {fileID: 746166170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: -1, y: -1, z: -1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2102332119}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 12.160461, y: -0.18835449}
-  m_SizeDelta: {x: 1043.4, y: 63.5}
+  m_AnchoredPosition: {x: 1056.3, y: 0}
+  m_SizeDelta: {x: 1043.3999, y: 63.5}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &746166172
 MonoBehaviour:
@@ -8461,7 +8461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38679248, g: 0.093049124, b: 0.17190516, a: 1}
+  m_Color: {r: 0.2264151, g: 0, b: 0.14818782, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8611,10 +8611,10 @@ RectTransform:
   - {fileID: 587690592}
   m_Father: {fileID: 877737999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -379, y: 270.6}
-  m_SizeDelta: {x: 462.5, y: 78.6}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200.09998, y: -58.5}
+  m_SizeDelta: {x: 462.5, y: 78.599976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793202236
 MonoBehaviour:
@@ -8981,8 +8981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0684fd18ceb095141b695c95fb490fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  baseMaxHealth: 100
-  health: 20
+  baseMaxHealth: 250
+  health: 250
   enemyDamageFX: {fileID: 1943497642}
   healthBarUI: {fileID: 1294002057}
   hitSound: {fileID: 8300000, guid: fcafa66ac41d6c4409e61bfbe93cc4e5, type: 3}
@@ -10217,8 +10217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d24f81bc4428e43a06ef5bac3cddd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Health: 200
-  MaxHealth: 200
+  Health: 250
+  MaxHealth: 250
   Width: 1043.4
   Height: 63.5
   healthBar: {fileID: 746166171}
@@ -13017,10 +13017,10 @@ RectTransform:
   - {fileID: 1493204732}
   m_Father: {fileID: 877737999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 254.6, y: -282}
-  m_SizeDelta: {x: 1062.4425, y: 78.6}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -352.7, y: 62.5}
+  m_SizeDelta: {x: 1062.4425, y: 78.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102332120
 MonoBehaviour:

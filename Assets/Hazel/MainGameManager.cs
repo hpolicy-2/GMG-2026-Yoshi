@@ -89,7 +89,7 @@ public class MainGameManager : MonoBehaviour
     {
         EnemyDefeated = true;
         PendingDialogue = finalVictoryDialogue;
-        SceneManager.LoadScene(safeRoomSceneName);
+        SceneManager.LoadScene("Safe Room");
     }
 
     private DialogueData GetRandomUnusedDeathDialogue()
