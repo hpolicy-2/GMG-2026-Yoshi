@@ -10209,9 +10209,6 @@ PrefabInstance:
       addedObject: {fileID: 1180251793}
     - targetCorrespondingSourceObject: {fileID: 4094433424935959390, guid: 3496d60217d16d848811c6811377d32e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1180251794}
-    - targetCorrespondingSourceObject: {fileID: 4094433424935959390, guid: 3496d60217d16d848811c6811377d32e, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1180251799}
   m_SourcePrefab: {fileID: 100100000, guid: 3496d60217d16d848811c6811377d32e, type: 3}
 --- !u!1 &1180251770 stripped
@@ -10349,25 +10346,6 @@ MonoBehaviour:
   jumpAudioClip: {fileID: 8300000, guid: 79f904b880a43754894d3b92e455a907, type: 3}
   groundTag: Ground
   checkGround: 1
---- !u!114 &1180251794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180251770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d926fec57fb4c411a912d607e2822370, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Move
-  rigidbody2D: {fileID: 0}
-  typeOfControl: 1
-  speed: 0.6
-  movementType: 1
-  orientToDirection: 1
-  lookAxis: 1
-  animator: {fileID: 0}
 --- !u!114 &1180251799
 MonoBehaviour:
   m_ObjectHideFlags: 0
