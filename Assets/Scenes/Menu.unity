@@ -1300,6 +1300,8 @@ MonoBehaviour:
   finalVictoryDialogue: {fileID: 11400000, guid: 31dc45d3a7f28d8418fd45c6dd6ca1fe, type: 2}
   combatSceneNames:
   - Combat
+  - Combat2
+  - Combat3
   gameOverSceneName: GameOver
   safeRoomSceneName: SafeRoom
 --- !u!1 &1590516639
