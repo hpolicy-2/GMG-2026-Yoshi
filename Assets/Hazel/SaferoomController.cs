@@ -7,11 +7,13 @@ public class SafeRoomController : MonoBehaviour
     [SerializeField] private DoorMechanic door;
     [SerializeField] private GameObject blackScreenOverlay;
     [SerializeField] private GameObject lovieCharacterSprite;
+    [SerializeField] private GameObject clickToContinueNotice;
     private void Start()
     {
         PlaySafeRoomMusic();
         if (MainGameManager.Instance == null)
         {
+            clickToContinueNotice.SetActive(true);
             Debug.LogWarning("GameManager not found — are you testing this scene directly instead of from Main Menu?");
             return;
         }
@@ -44,6 +46,7 @@ public class SafeRoomController : MonoBehaviour
     public void OnDoorOpened()
     {
         if (MainGameManager.Instance.EnemyDefeated) return;
+        clickToContinueNotice.SetActive(false);
 
         if (!MainGameManager.Instance.firstDoorCutscenePlayed)
         {
