@@ -13,6 +13,7 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private float minimumHealthPercent = 0.1f; // never go below 10% heaht
 
     public AudioClip safeRoomMusic;
+    public AudioClip victoryMusic;
     public AudioClip gameOverMusic;
     public AudioClip combatMusic;
     public AudioClip menuMusic;
@@ -23,6 +24,8 @@ public class MainGameManager : MonoBehaviour
     public bool firstDoorCutscenePlayed = false;
     public DialogueData firstDoorCutsceneDialogue;
 
+
+
     public DialogueData introDialogue;
     public List<DialogueData> deathDialoguePool; // random death dialogue
     public DialogueData finalVictoryDialogue;
@@ -32,8 +35,8 @@ public class MainGameManager : MonoBehaviour
 
     [Header("Combat Levels")]
     public List<string> combatSceneNames; // listing scene names in an array within the game manager object
-    public string gameOverSceneName = "GameOver";
-    public string safeRoomSceneName = "SafeRoom";
+    public string gameOverSceneName = "Game Over";
+    public string safeRoomSceneName = "Safe Room";
 
     public void OnPlayerDeath()
     {
@@ -53,8 +56,17 @@ public class MainGameManager : MonoBehaviour
         }
     }
 
-
     public bool EnemyDefeated { get; private set; } = false;
+
+    public void OnEnemyDefeated()
+    {
+        EnemyDefeated = true; // <-- this line was missing
+        PendingDialogue = finalVictoryDialogue;
+        SoundManager.Instance.PlayMusic(victoryMusic, musicFadeDuration); // set victory music here, once, at the source of truth
+        SceneManager.LoadScene("Safe Room");
+    }
+
+    
 
     private void Awake()
     {
@@ -84,14 +96,6 @@ public class MainGameManager : MonoBehaviour
     }
 
   
-
-    public void OnEnemyDefeated()
-    {
-        EnemyDefeated = true;
-        PendingDialogue = finalVictoryDialogue;
-        SceneManager.LoadScene("Safe Room");
-    }
-
     private DialogueData GetRandomUnusedDeathDialogue()
     {
         if (unusedDeathDialogues.Count == 0)
@@ -115,8 +119,13 @@ public class MainGameManager : MonoBehaviour
     public DialogueData GetDialogueForThisVisit()
     {
         if (deathCount == 0 && !EnemyDefeated)
+        {
             return introDialogue;
-
+        }
+        else if (EnemyDefeated)
+        {
+            return finalVictoryDialogue;
+        }
         return PendingDialogue;
     }
 }

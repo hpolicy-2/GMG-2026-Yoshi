@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour
 {
@@ -11,5 +12,10 @@ public class GameOverController : MonoBehaviour
     public void OnQuitButtonPressed()
     {
         Application.Quit();
+    }
+
+    public void OnRestartButtonPressed()
+    {
+        Application.LoadLevel(0);
     }
 }

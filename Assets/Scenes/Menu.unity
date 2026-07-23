@@ -1279,6 +1279,7 @@ MonoBehaviour:
   healthReductionPerDeath: 0.2
   minimumHealthPercent: 0.1
   safeRoomMusic: {fileID: 8300000, guid: a4490e1c4373e88478bbe7aa7a07c5d5, type: 3}
+  victoryMusic: {fileID: 8300000, guid: 7815995bde76ae74f9bfbff7f6752ae2, type: 3}
   gameOverMusic: {fileID: 8300000, guid: 0656c63ef87c0f64aaca7af75039db35, type: 3}
   combatMusic: {fileID: 8300000, guid: a851cad317191014a8b8d105a5a86b2b, type: 3}
   menuMusic: {fileID: 8300000, guid: fe463e578eac70041be263ea02ffe6c1, type: 3}

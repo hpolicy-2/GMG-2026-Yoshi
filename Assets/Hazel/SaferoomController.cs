@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SafeRoomController : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class SafeRoomController : MonoBehaviour
     [SerializeField] private GameObject blackScreenOverlay;
     [SerializeField] private GameObject lovieCharacterSprite;
     [SerializeField] private GameObject clickToContinueNotice;
+
     private void Start()
     {
-        PlaySafeRoomMusic();
         if (MainGameManager.Instance == null)
         {
             clickToContinueNotice.SetActive(true);
@@ -18,20 +19,27 @@ public class SafeRoomController : MonoBehaviour
             return;
         }
 
-        door.SetLocked(true);
+        if (!MainGameManager.Instance.EnemyDefeated)
+        {
+            PlaySafeRoomMusic();
+        }
+        
 
+        door.SetLocked(true);
         UpdateAllyVisibility();
 
         DialogueData toPlay = MainGameManager.Instance.GetDialogueForThisVisit();
         dialogueUI.PlayDialogue(toPlay);
     }
-    private void Update() 
-    { 
-        if (dialogueUI.IsFinished) 
-        { 
-            door.SetLocked(false); 
-        } 
+
+    private void Update()
+    {
+        if (dialogueUI.IsFinished)
+        {
+            door.SetLocked(false);
+        }
     }
+
     private void UpdateAllyVisibility()
     {
         bool shouldShow = MainGameManager.Instance.deathCount >= 1;
@@ -45,7 +53,13 @@ public class SafeRoomController : MonoBehaviour
 
     public void OnDoorOpened()
     {
-        if (MainGameManager.Instance.EnemyDefeated) return;
+       //door now leads to credits
+        if (MainGameManager.Instance.EnemyDefeated)
+        {
+            SceneManager.LoadScene("Credits");
+            return;
+        }
+
         clickToContinueNotice.SetActive(false);
 
         if (!MainGameManager.Instance.firstDoorCutscenePlayed)
@@ -63,7 +77,6 @@ public class SafeRoomController : MonoBehaviour
         door.SetLocked(true);
         blackScreenOverlay.SetActive(true);
 
-        SoundManager.Instance.PlayMusic(MainGameManager.Instance.gameOverMusic, MainGameManager.Instance.musicFadeDuration);
         dialogueUI.PlayDialogue(MainGameManager.Instance.firstDoorCutsceneDialogue);
 
         yield return new WaitUntil(() => dialogueUI.IsFinished);
