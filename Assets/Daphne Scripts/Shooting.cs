@@ -47,5 +47,13 @@ public class Shooting : MonoBehaviour
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
 
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && canFire)
+        {
+            SoundManager.Instance.PlaySFXRandomPitch(attackSound);
+            canFire = false;
+            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+
+        }
     }
 }
