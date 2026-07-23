@@ -1248,6 +1248,10 @@ PrefabInstance:
       propertyPath: speed
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 2317629157363439591, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
+      propertyPath: waypoints.Array.data[0].x
+      value: -20.26
+      objectReference: {fileID: 0}
     - target: {fileID: 2683483081834061875, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.24537
@@ -8383,6 +8387,10 @@ PrefabInstance:
     - target: {fileID: 8606939335869377732, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: speed
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606939335869377732, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
+      propertyPath: waypoints.Array.data[0].x
+      value: 18.38
       objectReference: {fileID: 0}
     - target: {fileID: 8853719276242563672, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_Color.b
