@@ -4,7 +4,7 @@ using System.Collections;
 [AddComponentMenu("Playground/Movement/Jump")]
 [RequireComponent(typeof(Rigidbody2D))]
 
-public class Jump : MonoBehaviour
+public class CustomJump : MonoBehaviour
 {
     [Header("Jump setup")]
     // the key used to activate the push
@@ -56,13 +56,13 @@ public class Jump : MonoBehaviour
 
     private void PerformJump()
     {
-        
+
         if (SoundManager.Instance != null && jumpAudioClip != null)
         {
             SoundManager.Instance.PlaySFXRandomPitch(jumpAudioClip);
         }
 
-   
+
         rb2d.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
         canJump = !checkGround;
     }

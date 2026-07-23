@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviour
     public bool canFire;
     private float timer;
     public float timeBetweenFiring;
+    [SerializeField] private AudioClip attackSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +42,7 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButton(0) && canFire)
         {
+            SoundManager.Instance.PlaySFXRandomPitch(attackSound);
             canFire = false;
             Instantiate(bullet, bulletTransform.position, Quaternion.identity);
 

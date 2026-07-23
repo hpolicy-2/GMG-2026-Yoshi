@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    [SerializeField] private AudioClip playerHurtSound;
     [SerializeField] private CinemachineImpulseSource impulseSource;
     [SerializeField] private float shakeForce = 1f;
 
@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int amount)
     {
         setHealth(- amount);
+        SoundManager.Instance.PlaySFXRandomPitch(playerHurtSound);
 
         ShakeCamera();
         Debug.Log("Player hit by " + amount + "!");

@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class DoorMechanic : MonoBehaviour
 {
     [SerializeField] private GameObject interactPrompt;
     private bool playerInRange = false;
     private bool isLocked = true;
+    [SerializeField] private AudioClip doorOpenSound;
 
     public void SetLocked(bool locked)
     {
         isLocked = locked;
-        if (isLocked && interactPrompt != null)
-            interactPrompt.SetActive(false);
+
+        if (interactPrompt != null)
+            interactPrompt.SetActive(!isLocked && playerInRange);
     }
 
     private void Update()
@@ -45,7 +47,8 @@ public class Door : MonoBehaviour
     {
         if (interactPrompt != null)
             interactPrompt.SetActive(false);
-
+        
+        SoundManager.Instance.PlaySFX(doorOpenSound);
         FindFirstObjectByType<SafeRoomController>().OnDoorOpened();
     }
 }

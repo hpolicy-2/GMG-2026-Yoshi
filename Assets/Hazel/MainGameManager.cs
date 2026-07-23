@@ -6,26 +6,62 @@ public class MainGameManager : MonoBehaviour
 {
     public static MainGameManager Instance { get; private set; }
 
+
+
     public int deathCount = 0;
     [SerializeField] private float healthReductionPerDeath = 0.2f;
     [SerializeField] private float minimumHealthPercent = 0.1f; // never go below 10% heaht
 
-   
+    public AudioClip safeRoomMusic;
+    public AudioClip gameOverMusic;
+    public AudioClip combatMusic;
+    public AudioClip menuMusic;
+
+
+    public float musicFadeDuration = 1.5f;
+
+    public bool firstDoorCutscenePlayed = false;
+    public DialogueData firstDoorCutsceneDialogue;
+
     public DialogueData introDialogue;
     public List<DialogueData> deathDialoguePool; // random death dialogue
     public DialogueData finalVictoryDialogue;
 
     private List<DialogueData> unusedDeathDialogues = new List<DialogueData>();
-    public DialogueData PendingDialogue { get; private set; } // set before loading safe room
+    public DialogueData PendingDialogue { get; private set; } 
 
     [Header("Combat Levels")]
-    public List<string> combatSceneNames; // all scene names
+    public List<string> combatSceneNames; // listing scene names in an array within the game manager object
+    public string gameOverSceneName = "GameOver";
     public string safeRoomSceneName = "SafeRoom";
+
+    public void OnPlayerDeath()
+    {
+        deathCount++;
+        PendingDialogue = GetRandomUnusedDeathDialogue();
+        SoundManager.Instance.PlayMusic(MainGameManager.Instance.gameOverMusic, MainGameManager.Instance.musicFadeDuration);
+
+        SceneManager.LoadScene("Game Over"); 
+    }
+
+    public void ContinueToSafeRoom()
+    {
+        SceneManager.LoadScene("Safe Room");
+        if (deathCount > 0)
+        {
+            
+        }
+    }
+
 
     public bool EnemyDefeated { get; private set; } = false;
 
     private void Awake()
     {
+        if (deathCount == 0)
+        {
+          
+        }
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -47,12 +83,7 @@ public class MainGameManager : MonoBehaviour
         return Mathf.Max(percent, minimumHealthPercent);
     }
 
-    public void OnPlayerDeath()
-    {
-        deathCount++;
-        PendingDialogue = GetRandomUnusedDeathDialogue();
-        SceneManager.LoadScene(safeRoomSceneName);
-    }
+  
 
     public void OnEnemyDefeated()
     {
@@ -75,6 +106,7 @@ public class MainGameManager : MonoBehaviour
     // player opens door
     public void EnterCombat()
     {
+        SoundManager.Instance.PlayMusic(MainGameManager.Instance.combatMusic, MainGameManager.Instance.musicFadeDuration);
         string chosenLevel = combatSceneNames[Random.Range(0, combatSceneNames.Count)];
         SceneManager.LoadScene(chosenLevel);
     }

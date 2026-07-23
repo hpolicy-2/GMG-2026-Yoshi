@@ -1,34 +1,72 @@
 using UnityEngine;
+using System.Collections;
 
 public class SafeRoomController : MonoBehaviour
 {
     [SerializeField] private DialogueUIManager dialogueUI;
-    [SerializeField] private GameObject door;
-
+    [SerializeField] private DoorMechanic door;
+    [SerializeField] private GameObject blackScreenOverlay;
+    [SerializeField] private GameObject lovieCharacterSprite;
     private void Start()
     {
-        door.SetActive(false); //lock dfoor during dialogue
+        PlaySafeRoomMusic();
+        if (MainGameManager.Instance == null)
+        {
+            Debug.LogWarning("GameManager not found — are you testing this scene directly instead of from Main Menu?");
+            return;
+        }
+
+        door.SetLocked(true);
+
+        UpdateAllyVisibility();
 
         DialogueData toPlay = MainGameManager.Instance.GetDialogueForThisVisit();
         dialogueUI.PlayDialogue(toPlay);
     }
-
-    private void Update()
+    private void Update() 
+    { 
+        if (dialogueUI.IsFinished) 
+        { 
+            door.SetLocked(false); 
+        } 
+    }
+    private void UpdateAllyVisibility()
     {
-        if (dialogueUI.IsFinished && !door.activeSelf)
-        {
-            door.SetActive(true);
-        }
+        bool shouldShow = MainGameManager.Instance.deathCount >= 1;
+        lovieCharacterSprite.SetActive(shouldShow);
     }
 
+    private void PlaySafeRoomMusic()
+    {
+        SoundManager.Instance.PlayMusic(MainGameManager.Instance.safeRoomMusic, MainGameManager.Instance.musicFadeDuration);
+    }
 
     public void OnDoorOpened()
     {
-        if (MainGameManager.Instance.EnemyDefeated)
+        if (MainGameManager.Instance.EnemyDefeated) return;
+
+        if (!MainGameManager.Instance.firstDoorCutscenePlayed)
         {
-            // enemy is already dead
-            return;
+            StartCoroutine(PlayFirstDoorCutscene());
         }
+        else
+        {
+            MainGameManager.Instance.EnterCombat();
+        }
+    }
+
+    private IEnumerator PlayFirstDoorCutscene()
+    {
+        door.SetLocked(true);
+        blackScreenOverlay.SetActive(true);
+
+        SoundManager.Instance.PlayMusic(MainGameManager.Instance.gameOverMusic, MainGameManager.Instance.musicFadeDuration);
+        dialogueUI.PlayDialogue(MainGameManager.Instance.firstDoorCutsceneDialogue);
+
+        yield return new WaitUntil(() => dialogueUI.IsFinished);
+
+        blackScreenOverlay.SetActive(false);
+        MainGameManager.Instance.firstDoorCutscenePlayed = true;
         MainGameManager.Instance.EnterCombat();
     }
 }

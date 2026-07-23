@@ -8,6 +8,10 @@ public class enemyhealth : MonoBehaviour
     public int health;
     public ParticleSystem enemyDamageFX;
     public EnemyHealthBarUI healthBarUI;
+
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip deathSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -30,6 +34,7 @@ public class enemyhealth : MonoBehaviour
     public void damageEnemy(float amount)
     {
         enemyDamageFX.Play();
+        SoundManager.Instance.PlaySFX(hitSound);
 
         currentHealth -= amount;
         if (currentHealth <= 0f)
@@ -40,6 +45,7 @@ public class enemyhealth : MonoBehaviour
     }
     private void Die()
     {
+        SoundManager.Instance.PlaySFX(deathSound); 
         MainGameManager.Instance.OnEnemyDefeated();
     }
 

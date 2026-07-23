@@ -592,9 +592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f10aa5048a54a24921059835c4aa10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
-  rigidbody2D: {fileID: 0}
   key: 273
   jumpStrength: 8
+  jumpAudioClip: {fileID: 0}
   groundTag: Ground
   checkGround: 1
 --- !u!1 &566990201 stripped
@@ -1056,6 +1056,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1106399541508799013, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1565109920395993195, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1087,6 +1091,10 @@ PrefabInstance:
     - target: {fileID: 2304992501492740740, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317629157363439591, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
+      propertyPath: speed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2683483081834061875, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8176,6 +8184,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -35.18
       objectReference: {fileID: 0}
+    - target: {fileID: 8575909745765949909, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606939335869377732, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8853719276242563672, guid: 890623ad8dac8c84d9304a0cde6b8199, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -8815,12 +8831,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Patrol
   rigidbody2D: {fileID: 0}
-  speed: 0.5
+  speed: 1.34
   directionChangeInterval: 3
   orientToDirection: 0
-  lookAxis: 0
+  lookAxis: 2
   waypoints:
-  - {x: 7.4986973, y: -2.5488892}
+  - {x: 7.7792883, y: -4.623668}
 --- !u!50 &871244430
 Rigidbody2D:
   serializedVersion: 5
@@ -8969,6 +8985,8 @@ MonoBehaviour:
   health: 20
   enemyDamageFX: {fileID: 1943497642}
   healthBarUI: {fileID: 1294002057}
+  hitSound: {fileID: 8300000, guid: fcafa66ac41d6c4409e61bfbe93cc4e5, type: 3}
+  deathSound: {fileID: 8300000, guid: fcafa66ac41d6c4409e61bfbe93cc4e5, type: 3}
 --- !u!114 &871244434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9186,6 +9204,7 @@ MonoBehaviour:
   bulletTransform: {fileID: 1060882125}
   canFire: 1
   timeBetweenFiring: 0.3
+  attackSound: {fileID: 0}
 --- !u!1 &946567023
 GameObject:
   m_ObjectHideFlags: 0
@@ -9854,7 +9873,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7855251077173111731, guid: 3496d60217d16d848811c6811377d32e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3286527438492946623, guid: 3496d60217d16d848811c6811377d32e, type: 3}
@@ -9879,6 +9899,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4094433424935959390, guid: 3496d60217d16d848811c6811377d32e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1180251792}
+    - targetCorrespondingSourceObject: {fileID: 4094433424935959390, guid: 3496d60217d16d848811c6811377d32e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180251793}
   m_SourcePrefab: {fileID: 100100000, guid: 3496d60217d16d848811c6811377d32e, type: 3}
 --- !u!1 &1180251770 stripped
 GameObject:
@@ -9902,6 +9925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d660362d4976b746a56286cd0085cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  playerHurtSound: {fileID: 8300000, guid: a425088628df6784f96943e4a069a61c, type: 3}
   impulseSource: {fileID: 1180251792}
   shakeForce: 1
   Health: 80
@@ -9997,6 +10021,23 @@ MonoBehaviour:
     DissipationDistance: 100
     PropagationSpeed: 343
   DefaultVelocity: {x: 0, y: -1, z: 0}
+--- !u!114 &1180251793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180251770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60eded14fce1a2e4b8bc8777f555e38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  key: 273
+  jumpStrength: 10
+  jumpAudioClip: {fileID: 8300000, guid: 79f904b880a43754894d3b92e455a907, type: 3}
+  groundTag: Ground
+  checkGround: 1
 --- !u!1 &1225973686
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,7 +11535,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12269,6 +12310,7 @@ MonoBehaviour:
   bulletTransform: {fileID: 946567024}
   canFire: 1
   timeBetweenFiring: 0.3
+  attackSound: {fileID: 8300000, guid: 882beeadf221f0e49844e6e931d23929, type: 3}
 --- !u!1001 &1943497639
 PrefabInstance:
   m_ObjectHideFlags: 0
