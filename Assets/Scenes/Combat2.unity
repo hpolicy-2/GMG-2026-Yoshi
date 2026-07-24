@@ -735,6 +735,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3558545925649115308, guid: 54e139d5b4108bf4880fe234cd5cbdaf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.18
+      objectReference: {fileID: 0}
     - target: {fileID: 4340224346278616894, guid: 54e139d5b4108bf4880fe234cd5cbdaf, type: 3}
       propertyPath: playerHealth
       value: 
@@ -763,6 +767,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 922764387}
+    - target: {fileID: 5485591749659157007, guid: 54e139d5b4108bf4880fe234cd5cbdaf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6187237419778779989, guid: 54e139d5b4108bf4880fe234cd5cbdaf, type: 3}
       propertyPath: playerHealth
       value: 
